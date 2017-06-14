@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--include meta-->
+    {include file="tool:basicMeta" title="后台管理系统" /}
+    <link rel="shortcut icon" href="{$Think.config.STATIC_ADMIN}/favicon.ico">
+    <link href="{$Think.config.STATIC_ADMIN}/theme/css/bootstrap-3.3.6.min.css" rel="stylesheet">
+    <link href="{$Think.config.STATIC_ADMIN}/theme/css/font-awesome-4.4.0.min.css" rel="stylesheet">
+    <link href="{$Think.config.STATIC_ADMIN}/theme/css/animate.min.css" rel="stylesheet">
+    <link href="{$Think.config.STATIC_ADMIN}/theme/css/index.min.css" rel="stylesheet">
+</head>
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<div id="wrapper">
+    <!--左侧导航菜单Container开始-->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="nav-close"><i class="fa fa-times-circle"></i>
+        </div>
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown" id="profile-dropdown" style="text-align: center">
+                        <img alt="image" class="img-circle" src="/static/profile_small.jpg"/>
+                        <br><br>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="text-muted text-xs block">
+                                <strong>{$username}</strong><b class="caret"></b>
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInLeft m-t-xs">
+                            <li><a class="J_menuItem" href="http://home.sise.cn">修改密码</a></li>
+                            <li><a class="J_menuItem" href="http://localhost">个人资料</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/admin/admin/logout.html">安全退出</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="J_menuItem" data-index="0" href="/admin/website/adminIndex">
+                        <i class="fa fa-home"></i>
+                        <span class="nav-label">官网运营信息</span>
+                    </a>
+                </li>
+                <li class="divider line dk"></li>
+                <li>
+                    <a class="J_menuItem" href="">
+                        <i class="fa fa-columns"></i>
+                        <span class="nav-label">布局</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa fa-bar-chart-o"></i>
+                        <span class="nav-label">统计图表</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-envelope"></i>
+                        <span class="nav-label">信箱</span>
+                        <span class="label label-warning pull-right">16</span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-desktop"></i>
+                        <span class="nav-label">Optional Item</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i class="fa fa-table"></i>
+                        <span class="nav-label">Optional Item</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">
+                            Bootstrap Table
+                            <span class="label label-danger pull-right">推荐</span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="fa fa-picture-o"></i>
+                        <span class="nav-label">相册</span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                        <li><a class="J_menuItem" href="">Optional Item</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="J_menuItem" href="">
+                        <i class="fa fa-magic"></i>
+                        <span class="nav-label">CSS动画</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;"><i class="glyphicon glyphicon-cog"></i>
+                        <span class="nav-label">官网设置 </span>
+                        <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                        <li><a class="J_menuItem" href="/admin/website/websiteBasicMessageSetting">官网基础信息</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!--左侧导航菜单Container结束-->
+
+    <!--右侧主体容器Container开始-->
+    <div id="page-wrapper" class="gray-bg dashbard-1">
+        <!--顶部菜单工具栏-->
+        <div class="row content-tabs">
+            <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i></button>
+            <nav class="page-tabs J_menuTabs">
+                <div class="page-tabs-content">
+                    <a href="javascript:;" class="active J_menuTab" data-id="/admin/website/adminIndex">首页</a>
+                </div>
+            </nav>
+            <button class="roll-nav roll-right J_tabRight">
+                <i class="fa fa-forward"></i>
+            </button>
+            <div class="btn-group roll-nav roll-right">
+                <button class="dropdown J_tabClose" data-toggle="dropdown">
+                    关闭操作<span class="caret"></span>
+                </button>
+                <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                    <li class="J_tabCloseAll"><a>关闭全部选项卡</a></li>
+                    <li class="J_tabCloseOther"><a>关闭其它选项卡</a></li>
+                </ul>
+            </div>
+            <a href="/admin/admin/logout" class="roll-nav roll-right J_tabExit">
+                <i class="fa fa fa-sign-out"></i>退出
+            </a>
+        </div>
+
+        <!--主体容器MainContainer-->
+        <div class="row J_mainContent" id="content-main" style="height: calc(100% - 80px)">
+            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="/admin/website/adminIndex"
+                    frameborder="0" data-id="index_v1.html" seamless>
+
+            </iframe>
+        </div>
+
+        <!--脚部Footer-->
+        <div class="footer">
+            samego Admin
+        </div>
+    </div>
+    <!--右侧主体容器Container结束-->
+</div>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/jquery-2.1.4.min.js"></script>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/bootstrap-3.3.6.min.js"></script>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/plugins/layer/layer.min.js"></script>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/js-4.1.0.min.js"></script>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/contabs.min.js"></script>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/plugins/pace/pace.min.js"></script>
+<script src="{$Think.config.STATIC_ADMIN}/theme/js/index.js"></script>
+</body>
+
+</html>

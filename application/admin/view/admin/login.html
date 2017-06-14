@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--include meta-->
+    {include file="tool:basicMeta" title="登录后台管理系统" /}
+    <script src="/static/public/javascript/jquery-2.1.4.min.js"></script>
+    <script src="/static/public/javascript/jquery.min.js"></script>
+    <!--include basic-->
+    {include file="tool:basicHeader" name="login"/}
+</head>
+<body>
+<!-- begin -->
+<div id="login">
+    <div class="wrapper">
+        <div class="login">
+            <form action="#" method="post" class="container offset1 loginform">
+                <div id="owl-login">
+                    <div class="hand"></div>
+                    <div class="hand hand-r"></div>
+                    <div class="arms">
+                        <div class="arm"></div>
+                        <div class="arm arm-r"></div>
+                    </div>
+                </div>
+                <div class="pad">
+                    <!--用户名-->
+                    <div class="control-group">
+                        <div class="ui input fluid controls">
+                            <label for="username" class="control-label fa fa-envelope"></label>
+                            <input id="username" type="text" placeholder="请输入用户名..." tabindex="1"
+                                   autofocus="autofocus" class="form-control input-medium" required>
+                        </div>
+                    </div>
+                    <!--密码-->
+                    <div class="control-group">
+                        <div class="ui input fluid controls">
+                            <label for="password" class="control-label fa fa-asterisk"></label>
+                            <input id="password" type="password" placeholder="请输入密码..." tabindex="2"
+                                   class="form-control input-medium" required>
+                        </div>
+                    </div>
+                    <!--验证码-->
+                    <div class="control-group">
+                        <div class="ui input fluid controls">
+                            <label for="captcha" class="control-label fa fa-asterisk"></label>
+                            <input id="captcha" type="text" placeholder="请输入验证码..." tabindex="2"
+                                   class="form-control input-medium">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <img id="captcha_str" src="{:captcha_src()}" onclick="this.src='/captcha.html'"/>
+                    <button type="button" id="submit-button" tabindex="4" class="btn btn-primary">登录后台</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end -->
+</body>
+</html>
